@@ -28,16 +28,16 @@ body {
 
 /* small logo */
 .largeLogo {
-    width: 300px;
-    height: 300px;
+    width: 20em;
+    height: 20em;
     margin-right: 10px;
 }
 
 /* menu buttons */
 .menuButton {
-    font-size: 55px;
-    padding: 20px;
-    margin: 40px;
+    font-size: 3em;
+    padding: 1em;
+    margin: .8em;
 }
 
 /* hover on menu button */
@@ -56,4 +56,26 @@ body {
     width: 100%;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
+}
+
+/* main content container */
+.mainContentContainer {
+    display: flex;
+    margin-top: 2em;
+    justify-content: center;
+    align-items: center;
+    height: 95%;
+    width: 100%;
+}
+
+.mainContent {
+/* fill and border rad, fontsize */
+    font-size: 30px;
+    height: 40em;
+    width: 100%;
+    border-radius: 20px;
+    background-color: #ffffff;
+    padding: 1em;
+    margin-left: 1em;
+    margin-right: 1em;
 }

@@ -28,11 +28,10 @@ const firebaseConfig = {
   appId: "1:481952527135:web:c1a7ea2c1b4555c853362a",
   measurementId: "G-L3B80R35L1"
 };
+
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
-
-
 
 // display as flex row with values "login", "signup", "about", "profile", with logo in the side
 const tpBarStyle = {
@@ -46,6 +45,7 @@ const menuItemStyle = {
     margin: '1em',
 }
 
+
 const Home = () => {
     return (
         <div>
@@ -54,17 +54,22 @@ const Home = () => {
                     <div className="logoContainer">
                         <img src={largeLogo} alt="large logo" className="largeLogo" />
                     </div>
-                    <div className="menuButton">
+                    <div id="login" className="menuButton">
                         Login
                     </div>
-                    <div className="menuButton">
+                    <div id="signup" className="menuButton">
                         Sign Up
                     </div>
-                    <div className="menuButton">
+                    <div id="about" className="menuButton">
                         About
                     </div>
                 </div>
                 
+                <div className="mainContentContainer">
+                    <div className="mainContent">
+                        Hello world.
+                    </div>
+                </div>
             </body>
         </div>
     );
