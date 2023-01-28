@@ -13,7 +13,6 @@ import '../BaseStyle.css';
 const tpBarStyle = {
     display: 'flex',
     flexDirection: 'row',
-
 }
 
 const menuItemStyle = {
@@ -26,7 +25,7 @@ const Home = () => {
     return (
         <div>
             <body>
-                <div className="topmenuBar" style={tpBarStyle}>
+                <div className="topMenuBar" style={tpBarStyle}>
                     <div className="logoContainer">
                         <img src={largeLogo} alt="large logo" className="largeLogo" />
                     </div>
