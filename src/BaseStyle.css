@@ -1,0 +1,33 @@
+/*
+    BaseStyle.css
+    author: @rishisant @matthewjunt
+*/
+
+/* Description: Contains all the basic styles that will be reapplied to all pages */
+
+/*
+    Main Page
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Istok+Web&display=swap');
+
+/*body style*/
+body {
+    background-color: #c9c9c9;
+    font-family: 'Istok Web', sans-serif;
+}
+
+/*logo container*/
+.logoContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+/* small logo */
+#sLogo {
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+}
