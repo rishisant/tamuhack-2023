@@ -6,6 +6,7 @@ import React, { Component } from 'react';
 import { BrowserRouter, Routes, Route, useNavigate } from 'react-router-dom';
 import smallLogo from '../img/mmlogo_1.png';
 import largeLogo from '../img/mmlogo_2.png';
+import { useEffect, useState } from 'react';
 
 import '../BaseStyle.css';
 
@@ -66,7 +67,7 @@ const Home = () => {
                     <div id="signup" className="menuButton">
                         Sign Up
                     </div>
-                    
+
                     <div id="about" className="menuButton">
                         About
                     </div>
