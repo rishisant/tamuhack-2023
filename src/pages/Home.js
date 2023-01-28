@@ -54,12 +54,12 @@ function handleGoogleSignIn() {
 
 
 // display as flex row with values "login", "signup", "about", "profile", with logo in the side
-const tpBarStyle = {
+export const tpBarStyle = {
     display: 'flex',
     flexDirection: 'row',
 }
 
-const menuItemStyle = {
+export const menuItemStyle = {
     fontSize: '2em',
     padding: '1em',
     margin: '1em',
