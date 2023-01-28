@@ -11,10 +11,9 @@ import '../BaseStyle.css';
 
 
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import firebase from 'firebase/app';
+import firebase from 'firebase/compat/app'
 import 'firebase/auth';
+import { GoogleAuthProvider } from "firebase/auth"
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 // Your web app's Firebase configuration
@@ -30,8 +29,25 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+// const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
+
+
+function handleGoogleSignIn() {
+    const provider = new firebase.auth.GoogleAuthProvider();
+
+    firebase.auth().signInWithPopup(provider)
+        .then(result => {
+        // The signed-in user info.
+        const user = result.user;
+        // navigate to the home page or show a success message
+        })
+        .catch(error => {
+        console.error(error.message);
+        // show an error message
+        });
+}
+
 
 // display as flex row with values "login", "signup", "about", "profile", with logo in the side
 const tpBarStyle = {
@@ -54,7 +70,7 @@ const Home = () => {
                     <div className="logoContainer">
                         <img src={largeLogo} alt="large logo" className="largeLogo" />
                     </div>
-                    <div id="login" className="menuButton">
+                    <div id="login" className="menuButton" onClick={handleGoogleSignIn}>
                         Login
                     </div>
                     <div id="signup" className="menuButton">
@@ -67,7 +83,7 @@ const Home = () => {
                 
                 <div className="mainContentContainer">
                     <div className="mainContent">
-                        Hello world.
+                        Hello worlds.
                     </div>
                 </div>
             </body>
